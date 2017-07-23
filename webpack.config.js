@@ -8,6 +8,10 @@ module.exports = {
         print: './src/print.js'
     },
     devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+        port: '1234'
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
