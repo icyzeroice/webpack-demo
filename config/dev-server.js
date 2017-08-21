@@ -23,6 +23,17 @@ let hotMiddleware = webpackHotMiddleware(compiler, {
   log: console.log
 });
 
+// refresh html
+compiler.plugin('compilation', (compilation) => {
+  compilation.plugin('html-webpack-plugin-after-emit', (data, cb) => {
+
+    // public event reload
+    hotMiddleware.publish({
+      action: 'reload'
+    });
+    cb();
+  })
+})
 
 // register components
 app.use(devMiddleware);

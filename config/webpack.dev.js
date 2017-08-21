@@ -6,7 +6,7 @@ const commonConfig = require('./webpack.common');
 let devConfig = merge(commonConfig, {
   entry: {
     app: [
-      'webpack-hot-middleware/client?reload=true',
+      path.resolve(__dirname, './dev-client'),
     ],
   },
   output: {
