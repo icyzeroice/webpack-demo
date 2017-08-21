@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const commonConfig = require('./webpack.common');
 
-module.exports = merge(commonConfig, {
+let prodConfig = merge(commonConfig, {
   output: {
     path: path.resolve(__dirname, '../dist/'),
     filename: '[name].bundle.js',
@@ -16,3 +16,5 @@ module.exports = merge(commonConfig, {
     })
   ]
 });
+
+module.exports = prodConfig;

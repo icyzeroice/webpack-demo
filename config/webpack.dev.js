@@ -3,10 +3,9 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 
-module.exports = merge(commonConfig, {
+let devConfig = merge(commonConfig, {
   entry: {
     app: [
-      'webpack/hot/dev-server',
       'webpack-hot-middleware/client?reload=true',
     ],
   },
@@ -15,10 +14,14 @@ module.exports = merge(commonConfig, {
     filename: '[name].bundle.js',
 
     // public path defined by processEnviroment
-    publicPath: 'http://127.0.0.1:1234',
+    // to let the auto-refresh work, we cannot use absolute url
+    // you can write reload instead of using this
+    publicPath: '/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ]
 });
+
+module.exports = devConfig;

@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+let commonConfig = {
   entry: {
     app: [
       path.resolve(__dirname, '../src/index.js')
@@ -37,3 +37,5 @@ module.exports = {
     }]
   }
 }
+
+module.exports = commonConfig;
