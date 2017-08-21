@@ -1,27 +1,19 @@
-import hello from './components/hello'
+import _ from 'lodash';
+import printMe from './components/print.js';
 
-function hello () {
-  let element = document.createElement('div');
-  let btn = document.createElement('button');
 
-  element.innerHTML = 'test';
+function component() {
+    var element = document.createElement('div');
+    var btn = document.createElement('button');
 
-  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  btn.innerHTML = 'Click me and check the console! (webpack-dev-server)';
+    btn.innerHTML = 'Click me and check the console! (webpack-dev-server-s)';
+    btn.onclick = printMe;
 
-  // printMe
-  btn.onclick = printMe;
+    element.appendChild(btn);
 
-  element.appendChild(btn);
-
-  return element;
+    return element;
 }
 
-function printMe() {
-  console.log('I get called from print.js');
-}
-
-/* console.log(hello); */
-console.log('index');
-document.body.appendChild(hello());
+document.body.appendChild(component());
