@@ -24,6 +24,7 @@
     "inline-source-map": "^0.6.2",
     "loglevel": "^1.4.1",
     "open-browser-webpack-plugin": "0.0.5",
+    "opt": "^0.1.14",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",

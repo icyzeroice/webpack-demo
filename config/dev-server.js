@@ -1,7 +1,7 @@
 
 const webpack = require('webpack');
 const express = require('express');
-const devConfig = require('./webpack.dev')
+const devConfig = require('./webpack.dev');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const opn = require('opn');
@@ -33,7 +33,7 @@ compiler.plugin('compilation', (compilation) => {
     });
     cb();
   })
-})
+});
 
 // register components
 app.use(devMiddleware);
@@ -47,4 +47,4 @@ let server = app.listen(1234, () => {
 
 module.exports = {
   close: () => server.close(),
-}
+};
