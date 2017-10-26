@@ -4,5 +4,8 @@
 import NavBar from './components/nav-bar/nav-bar';
 import Stage from './components/stage/stage'
 
-NavBar();
-Stage();
+let navBar = new NavBar();
+navBar.warning();
+
+let stage = new Stage();
+stage.show();

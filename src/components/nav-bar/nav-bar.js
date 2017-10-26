@@ -1,6 +1,8 @@
 
-function navBar() {
-	console.log('nav-bar!');
+class navBar {
+	warning() {
+		console.log('nav bar!');
+	}
 }
 
 export default navBar;
