@@ -1,6 +1,6 @@
 
 function stage() {
-	console.log('stage!');
+	console.log('new stage!');
 }
 
 export default stage;
