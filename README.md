@@ -11,6 +11,7 @@ Learn to use **webpack**
 - [x] babel support for es6+
 - [x] jshint syntax check
 - [x] packaging modularization code (suitable for SPA)
+- [x] webpack v3.8.1
 
 ## Next
 
